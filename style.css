@@ -1,0 +1,110 @@
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #333;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 40px;
+    min-width: 120px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.nav-links li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    transition: background 0.2s, color 0.2s;
+    border-radius: 4px;
+}
+
+.nav-links li a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+.hamburger {
+    display: none; /* Hide for desktop */
+}
+
+.Portfolio-Website{
+    float: left;
+    color: #000000;
+    margin-top: 100px;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 70px; /* Prevent content from hiding behind navbar */
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+ul li{
+    float: left;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    background-color: #ddd;
+    color: black;
+}
