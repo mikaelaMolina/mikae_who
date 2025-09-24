@@ -1,87 +1,121 @@
 <!DOCTYPE html>
-
-<html lang = "en">
-
-
+<html lang="en">
+<!--
+adjust to a more unique design that will represent me
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class ="Portfolio-Website" style="background-color:#f0f0f0">
+<body class="portfolio-website">
 
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="logo">Logo here</div>
+        <div class="logo">Portfolio</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#aboutMe">About Me</a></li>
+            <li><a href="#aboutMe">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contactMe">Contact Me</a></li>
+            <li><a href="#contactMe">Contact</a></li>
         </ul>
         <div class="hamburger">
-            <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
     </nav>
 
-    <section id="home">
-        <h1 class="name">Mikaela Vianca Molina</h1>
-        <p>This is a brief introduction about myself and my professional background.</p>
-    </section>
+    <main class="main-content">
+        <section id="home" class="hero-section">
+            <h1 class="name">Mikaela Vianca Molina</h1>
+            <p class="hero-subtitle">Full Stack Developer & Creative Problem Solver</p>
+            <p class="hero-description">Passionate about creating innovative digital experiences with modern
+                technologies and elegant design solutions.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">View Projects</a>
+                <a href="#contactMe" class="btn-secondary">Get In Touch</a>
+            </div>
+        </section>
 
-    <section id="aboutMe">
-        <h2>About Me</h2>
-        <p>Details about my personal and professional life.</p>
-    </section>
+        <section id="aboutMe" class="content-section">
+            <div class="glass-card">
+                <h2>About Me</h2>
+                <p>I'm a passionate developer who loves crafting beautiful, functional web experiences. With a keen eye
+                    for design and a strong technical foundation, I bridge the gap between creativity and code.</p>
+            </div>
+        </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <p>Details about my skills and competencies.</p>
-    </section>
+        <section id="skills" class="content-section">
+            <div class="glass-card">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">Frontend Development</div>
+                    <div class="skill-item">Backend Development</div>
+                    <div class="skill-item">UI/UX Design</div>
+                    <div class="skill-item">Database Management</div>
+                </div>
+            </div>
+        </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <p>Details about my work experience.</p>
-    </section>
+        <section id="experience" class="content-section">
+            <div class="glass-card">
+                <h2>Experience</h2>
+                <p>Building innovative solutions and leading development projects with a focus on user experience and
+                    technical excellence.</p>
+            </div>
+        </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <p>Details about my educational background.</p>
-    </section>
+        <section id="education" class="content-section">
+            <div class="glass-card">
+                <h2>Education</h2>
+                <p>Continuous learning and growth in computer science, software engineering, and emerging technologies.
+                </p>
+            </div>
+        </section>
 
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <p>Details about my certifications.</p>
-    </section>
+        <section id="certifications" class="content-section">
+            <div class="glass-card">
+                <h2>Certifications</h2>
+                <p>Industry-recognized certifications in modern development frameworks and cloud technologies.</p>
+            </div>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Details about my projects.</p>
-    </section>
+        <section id="projects" class="content-section">
+            <div class="glass-card">
+                <h2>Projects</h2>
+                <p>A collection of innovative projects showcasing technical skills and creative problem-solving
+                    abilities.</p>
+            </div>
+        </section>
 
-    <section id="contactMe">
-        <h2>Contact Me</h2>
-        <p>You can reach me at:
+        <section id="contactMe" class="content-section">
+            <div class="glass-card">
+                <h2>Contact Me</h2>
+                <p>Let's connect and discuss opportunities to work together on exciting projects.</p>
+            </div>
+        </section>
+    </main>
 
 
 
-          <footer>
-            <p>© 2025 My Portfolio. All rights reserved.</p>
-            <p>Follow me on 
-                <a href="https://www.linkedin.com/in/mikaela-molina/" target="_blank">LinkedIn</a>, 
-                <a href="https://github.com/mikaelaMolina" target="_blank">GitHub</a>
-            </p>
-          </footer>
+    <footer class="footer">
+        <div class="glass-card footer-content">
+            <p>© 2025 Mikaela Vianca Molina. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/mikaela-molina/" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://github.com/mikaelaMolina" target="_blank" class="social-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
 
-      
+</body>
 
 </html>
