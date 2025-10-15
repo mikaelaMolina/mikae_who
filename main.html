@@ -26,17 +26,17 @@ adjust to a more unique design that will represent me
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contactMe">Contact</a></li>
         </ul>
-        <div class="hamburger">
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-        </div>
+        </button>
     </nav>
 
     <main class="main-content">
         <section id="home" class="hero-section">
             <h1 class="name">Mikaela Vianca Molina</h1>
-            <p class="hero-subtitle">Full Stack Developer & Creative Problem Solver</p>
+            <p class="hero-subtitle" id="typed-subtitle">Full Stack Developer & Creative Problem Solver</p>
             <p class="hero-description">Passionate about creating innovative digital experiences with modern
                 technologies and elegant design solutions.</p>
             <div class="hero-buttons">
@@ -45,11 +45,22 @@ adjust to a more unique design that will represent me
             </div>
         </section>
 
-        <section id="aboutMe" class="content-section">
-            <div class="glass-card">
-                <h2>About Me</h2>
-                <p>I'm a passionate developer who loves crafting beautiful, functional web experiences. With a keen eye
-                    for design and a strong technical foundation, I bridge the gap between creativity and code.</p>
+        <section id="aboutMe" class="content-section about">
+            <div class="glass-card about-card">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>About me</h2>
+                        <p>I'm a passionate developer who loves crafting beautiful, functional web experiences. With a keen eye for design and a strong technical foundation, I bridge the gap between creativity and code.</p>
+                        <div class="about-actions">
+                            <a href="#contactMe" class="btn-primary">Hire me</a>
+                            <a href="#" class="btn-secondary">Download CV</a>
+                        </div>
+                    </div>
+                    <div class="about-illustration">
+                        <div class="illus-circle"></div>
+                        <div class="illus-person"></div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -88,18 +99,74 @@ adjust to a more unique design that will represent me
             </div>
         </section>
 
-        <section id="projects" class="content-section">
+        <section id="projects" class="content-section projects">
             <div class="glass-card">
-                <h2>Projects</h2>
-                <p>A collection of innovative projects showcasing technical skills and creative problem-solving
-                    abilities.</p>
+                <h2>My recent works</h2>
+                <div class="project-filters">
+                    <button class="filter active">All</button>
+                    <button class="filter">UI</button>
+                    <button class="filter">UX</button>
+                    <button class="filter">Web</button>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-thumb"></div>
+                        <h3>Dashboard UI</h3>
+                        <p>Analytics dashboard with glassmorphism.</p>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-thumb"></div>
+                        <h3>Landing Page</h3>
+                        <p>Marketing page with smooth animations.</p>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-thumb"></div>
+                        <h3>Mobile App</h3>
+                        <p>Prototype screens for e-commerce.</p>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-thumb"></div>
+                        <h3>Portfolio</h3>
+                        <p>Personal brand and case studies.</p>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-thumb"></div>
+                        <h3>Design System</h3>
+                        <p>Reusable components and tokens.</p>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-thumb"></div>
+                        <h3>Illustrations</h3>
+                        <p>Vector graphics for products.</p>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <section id="contactMe" class="content-section">
-            <div class="glass-card">
-                <h2>Contact Me</h2>
-                <p>Let's connect and discuss opportunities to work together on exciting projects.</p>
+        <section id="contactMe" class="content-section contact">
+            <div class="glass-card contact-card">
+                <h2>Got a project in mind?</h2>
+                <form class="contact-form" action="#" method="post" onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="name">Your name</label>
+                            <input id="name" type="text" placeholder="Name">
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Your email</label>
+                            <input id="email" type="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field full">
+                            <label for="message">Your message</label>
+                            <textarea id="message" rows="5" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn-primary" type="submit">Send message</button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
@@ -115,6 +182,61 @@ adjust to a more unique design that will represent me
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navbar = document.querySelector('.navbar');
+            var hamburger = document.querySelector('.hamburger');
+            if (navbar && hamburger) {
+                hamburger.addEventListener('click', function () {
+                    var isOpen = navbar.classList.toggle('open');
+                    hamburger.setAttribute('aria-expanded', String(isOpen));
+                });
+            }
+
+            // Typewriter effect for subtitle
+            var phrases = [
+                'Full Stack Developer',
+                'Creative Problem Solver',
+                'UI/UX Enthusiast',
+                'Lifelong Learner'
+            ];
+            var el = document.getElementById('typed-subtitle');
+            if (el) {
+                var idx = 0;
+                var char = 0;
+                var typing = true;
+                var basePrefix = '';
+                // Pull any static prefix before typing area if needed
+                // For now we type whole phrase
+
+                function tick() {
+                    var current = phrases[idx];
+                    if (typing) {
+                        char++;
+                        el.textContent = current.slice(0, char);
+                        if (char === current.length) {
+                            typing = false;
+                            setTimeout(tick, 1400); // pause at full text
+                            return;
+                        }
+                        setTimeout(tick, 70);
+                    } else {
+                        char--;
+                        el.textContent = current.slice(0, Math.max(0, char));
+                        if (char === 0) {
+                            typing = true;
+                            idx = (idx + 1) % phrases.length;
+                            setTimeout(tick, 250);
+                            return;
+                        }
+                        setTimeout(tick, 40);
+                    }
+                }
+                tick();
+            }
+        });
+    </script>
 
 </body>
 
